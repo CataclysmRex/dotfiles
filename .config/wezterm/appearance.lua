@@ -25,7 +25,7 @@ function M.apply_to_config(config)
 		background = "#242424"
 		config.window_background_opacity = 0.8
 		-- config.wayland_window_background_blur = true
-		config.kde_window_background_blur = true
+		config.wayland_window_background_blur = true
 	elseif wezterm.target_triple:find("apple") then
 		config.font_size = 14
 		background = "#222222"

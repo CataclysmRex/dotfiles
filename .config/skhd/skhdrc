@@ -183,7 +183,7 @@
 #
 # # alt - return : open -a /Applications/iTerm.app
 # # alt - return : open -a iTerm
-# alt - r : yabai --restart-service && sketchybar --reload
+alt - r : yabai --restart-service && sketchybar --reload && rift service restart
 # alt - r : sketchybar --reload
 alt - w : /opt/homebrew/bin/yabai -m window --close
 

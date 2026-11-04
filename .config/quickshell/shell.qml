@@ -5,6 +5,7 @@ import QtQuick
 import Quickshell
 
 import "./Bar"
+import "./Services"
 
 ShellRoot {
     // Multi-Monitor Bars
@@ -16,4 +17,7 @@ ShellRoot {
 
     // Future App Launcher Window (Single instance or centered on active screen)
     // LauncherWindow {}
+
+    // Headless notification catcher
+    NotificationSink {}
 }

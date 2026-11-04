@@ -18,11 +18,12 @@ RowLayout {
     property var desktopEntry: appId ? DesktopEntries.byId(appId) : null
 
     // Give the RowLayout an implicit size so parent containers know how big it is
-    implicitHeight: Math.max(icon.implicitHeight, textContainer.implicitHeight)
+    implicitHeight: Math.max(icon.implicitHeight, titleText.implicitHeight)
 
     IconImage {
+        id: icon
         implicitSize: 16
-        Layout.alignment: parent.verticalCenter
+        Layout.alignment: Qt.AlignVCenter | Qt.AlignLeft
         visible: desktopEntry && desktopEntry.icon !== ""
         source: Quickshell.iconPath(desktopEntry ? desktopEntry.icon : "", true)
     }

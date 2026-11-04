@@ -17,7 +17,7 @@ Item {
 
     Text {
         id: clockText
-        text: Qt.formatDateTime(clock.date, "hh:mm:ss")
+        text: Qt.formatDateTime(clock.date, "hh:mm:ss AP")
         color: Colors.foreground
         anchors.centerIn: parent
     }
@@ -30,11 +30,5 @@ Item {
 
     Calendar {
         id: popup
-
-        anchor.item: root
-        anchor.edges: Edges.Bottom | Edges.Right
-        anchor.gravity: Edges.Bottom | Edges.Left
-
-        visible: false
     }
 }

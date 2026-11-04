@@ -75,11 +75,5 @@ RowLayout {
 
     Mixer {
         id: popup
-
-        anchor.item: root
-        anchor.edges: Edges.Bottom | Edges.Right
-        anchor.gravity: Edges.Bottom | Edges.Left
-
-        visible: false
     }
 }

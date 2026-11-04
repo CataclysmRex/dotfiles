@@ -12,7 +12,7 @@ PanelWindow {
 
     margins {
         left: 20
-        right: barWindow.margins.left
+        right: 20
         top: 8
     }
 
@@ -26,19 +26,16 @@ PanelWindow {
 
     color: Colors.background
 
-    // RowLayout {
-    //
-    //     implicitHeight: parent.height
-    //
-    //     Section {
-    //         Workspaces {}
-    //     }
-    //
-    //     Section {}
-    // }
-
-    Section {
-        Workspaces {}
+    RowLayout {
+        anchors.left: parent.left
+        implicitHeight: parent.height
+        Section {
+            leftMargin: 8
+            PowerButton {}
+        }
+        Section {
+            Workspaces {}
+        }
     }
 
     Section {

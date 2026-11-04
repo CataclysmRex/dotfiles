@@ -7,6 +7,8 @@ import "../"
 PopupWindow {
     id: root
 
+    anchor.item: parent
+
     default property alias contentData: mainLayout.data
 
     property real margins: 16
@@ -17,7 +19,8 @@ PopupWindow {
     implicitWidth: wrapper.implicitWidth
     implicitHeight: wrapper.implicitHeight
 
-    anchor.margins.top: parent.implicitHeight
+    // anchor.margins.top: parent.implicitHeight
+    anchor.margins.top: root.QsWindow.window ? root.QsWindow.window.height : 0
 
     WrapperRectangle {
         id: wrapper

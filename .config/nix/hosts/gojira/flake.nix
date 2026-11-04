@@ -8,11 +8,14 @@
       url = "github:youwen5/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
   };
 
   outputs = inputs @ {
     self,
     nixpkgs,
+    nix-flatpak,
     ...
   }: {
     nixosModules.default = {
@@ -21,6 +24,7 @@
       };
 
       imports = [
+        nix-flatpak.nixosModules.nix-flatpak
         ./configuration.nix
       ];
     };

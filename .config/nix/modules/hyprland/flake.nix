@@ -29,7 +29,7 @@
           hyprpaper
           hyprpolkitagent
           playerctl
-          ags
+          # ags
           quickshell
           qt6.qt5compat
           # networkmanagerapplet

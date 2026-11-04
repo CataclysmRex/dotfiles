@@ -12,6 +12,8 @@
     ./hardware-configuration.nix
   ];
 
+  # services.gnome.gnome-keyring.enable = true; # or hyprpolkitagent/kwallet depending on your WM
+
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   my.desktop.hyprland.enable = true;
@@ -120,17 +122,15 @@
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     proton-vpn
     protonmail-desktop
-    beeper
-    rambox
-    franz
     calibre
+    sigil
     spotify
     # Use kdePackages.qtstyleplugin-kvantum for Qt6 / Plasma 6
     # Use libsForQt5.qtstyleplugin-kvantum for Qt5
     kdePackages.qtstyleplugin-kvantum
     # kvantummanager
+    openrgb
   ];
-
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -142,7 +142,12 @@
 
   # List services that you want to enable:
 
-  services.flatpak.enable = true;
+  services.flatpak = {
+    enable = true;
+    packages = [
+      "org.ferdium.Ferdium"
+    ];
+  };
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
@@ -177,6 +182,8 @@
     wayland.enable = true;
   };
 
+  services.hardware.openrgb.enable = true;
+
   fonts = {
     fontDir.enable = true;
     packages = with pkgs; [
@@ -185,6 +192,7 @@
       material-symbols
       paratype-pt-sans
       lexend
+      scientifica
     ];
   };
 

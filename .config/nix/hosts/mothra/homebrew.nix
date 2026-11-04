@@ -70,8 +70,10 @@
       "wezterm"
 
       "beeper"
+      "chatgpt"
       "commander-one"
       "discord"
+      "ferdium"
       "google-chrome"
       "google-drive"
       "kobo"
